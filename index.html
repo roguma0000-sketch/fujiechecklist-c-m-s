@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light" style=""><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文部科学委員会議事録 校正チェックリスト</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.classless.min.css">
+    <style>
+      :root {
+        --primary-color: #2e7d32; /* チームみらいイメージのグリーン */
+        --primary-light: #e8f5e9;
+        --text-color: #333333;
+        --border-color: #cccccc;
+        --font-family: 'Noto Sans JP', sans-serif;
+      }
+
+      body {
+        font-family: var(--font-family);
+        color: var(--text-color);
+        background-color: #ffffff;
+        max-width: 210mm; /* A4 width */
+        margin: 0 auto;
+        padding: 20mm; /* A4 margins */
+        box-sizing: border-box;
+        line-height: 1.5;
+        font-size: 11pt; /* Word document standard */
+      }
+
+      /* Reset Pico CSS specific overrides for document look */
+      header,
+      main,
+      footer {
+        padding: 0;
+      }
+
+      h1 {
+        font-size: 18pt;
+        color: var(--text-color);
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 12pt;
+        color: #fff;
+        background-color: var(--primary-color);
+        padding: 5px 10px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        border-radius: 2px;
+      }
+
+      h3 {
+        font-size: 11pt;
+        font-weight: bold;
+        color: var(--primary-color);
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 3px;
+        margin-top: 15px;
+        margin-bottom: 8px;
+      }
+
+      .meta-info {
+        text-align: right;
+        font-size: 10pt;
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      .alert-box {
+        border: 2px solid #c62828;
+        background-color: #ffebee;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+      }
+
+      .alert-title {
+        color: #c62828;
+        font-weight: bold;
+        font-size: 12pt;
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin-bottom: 10px;
+      }
+
+      li {
+        margin-bottom: 6px;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      input[type='checkbox'] {
+        margin-right: 10px;
+        margin-top: 4px;
+        transform: scale(1.2);
+        accent-color: var(--primary-color);
+      }
+
+      /* Table styles for the appendix */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 10pt;
+        margin-top: 10px;
+      }
+
+      th,
+      td {
+        border: 1px solid var(--border-color);
+        padding: 6px 10px;
+        text-align: left;
+      }
+
+      th {
+        background-color: var(--primary-light);
+        color: var(--primary-color);
+        font-weight: bold;
+        width: 40%;
+      }
+
+      .section-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .column {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .footer {
+        margin-top: 30px;
+        padding-top: 10px;
+        border-top: 1px solid var(--border-color);
+        font-size: 9pt;
+        text-align: center;
+        color: #999;
+      }
+
+      /* Utility */
+      .u-bold {
+        font-weight: bold;
+      }
+      .u-red {
+        color: #c62828;
+      }
+
+      /* Print styles */
+      @media print {
+        body {
+          padding: 15mm;
+          font-size: 10pt;
+        }
+        .alert-box {
+          border: 2px solid #c62828 !important;
+          background-color: #fff5f5 !important;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+        h2 {
+          background-color: #2e7d32 !important;
+          color: #fff !important;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+        th {
+          background-color: #e8f5e9 !important;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+        input[type='checkbox'] {
+          -webkit-appearance: checkbox;
+          appearance: checkbox;
+        }
+        .footer {
+          position: fixed;
+          bottom: 10mm;
+          width: 100%;
+        }
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+    </style>
+  </head>
+  <body style="">
+    <div class="meta-info">
+      作成日: 2026年3月12日<br>
+      版数: v1.0
+    </div>
+
+    <h1>文部科学委員会議事録 校正チェックリスト</h1>
+
+    <div class="alert-box">
+      <span class="alert-title">⚠️ 大原則：発言内容の改変は行わない</span>
+      <p style="margin: 0; font-size: 10.5pt">
+        読みやすくするための調整は行いますが、発言者の意図を変える編集は厳禁です。<br>
+        「テキストとして読みやすくするための調整の範囲内」と言い切れる範囲に留めてください。
+      </p>
+    </div>
+
+    <div class="section-container">
+      <!-- Left Column -->
+      <div class="column">
+        <h2>1. 作業前の準備</h2>
+        <ul>
+          <li>
+            <label><input type="checkbox"> 議事速報PDF/原稿の受け取り確認</label>
+          </li>
+          <li>
+            <label><input type="checkbox"> マニュアル（表記ルール）の手元確認</label>
+          </li>
+          <li>
+            <label><input type="checkbox"> 質問者の正式な役職・氏名・所属の確認（Slack進行管理表で確認）</label>
+          </li>
+          <li>
+            <label><input type="checkbox"> Googleドキュメントを「提案モード」に設定</label>
+          </li>
+        </ul>
+
+        <h2>2. タイトル・ヘッダーの整形</h2>
+        <ul>
+          <li>
+            <label><input type="checkbox"> タイトル形式：不要箇所の消去と名称の確認</label>
+          </li>
+          <li>
+            <label><input type="checkbox"> 概要文の記載（日付・委員会名・質問者名を含む）</label>
+          </li>
+          <li>
+            <label><input type="checkbox"> 質問者欄：「質問者＝チームみらい ○○（役職）・氏名」</label>
+          </li>
+          <li>
+            <label><input type="checkbox"> 答弁者欄：答弁者全員の所属・氏名をフル記載</label>
+          </li>
+        </ul>
+
+        <h2>3. 婉曲表現の調整（マニュアル準拠）</h2>
+        <ul>
+          <li>
+            <label><input type="checkbox"> 「というふうに考えます」→「と考えます」</label>
+          </li>
+          <li>
+            <label><input type="checkbox"> 「というふうに〜」→「と〜」（全文検索で確認）</label>
+          </li>
+          <li>
+            <label><input type="checkbox"> 「というようなところでございますが」→「というところでございますが」</label>
+          </li>
+          <li>
+            <label><input type="checkbox"> 「というふうな」→「という」</label>
+          </li>
+        </ul>
+
+        <h2>4. 長文の句点区切り</h2>
+        <ul>
+          <li>
+            <label><input type="checkbox"> 3行を超えるような長すぎる一文がないか確認</label>
+          </li>
+          <li>
+            <label><input type="checkbox"> 順接・逆接の接続詞の前で、文意を変えずに区切れるか確認</label>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right Column -->
+      <div class="column">
+        <h2>5. 誤字・脱字・表記統一</h2>
+        <ul>
+          <li>
+            <label><input type="checkbox"> 明白な誤字・脱字の修正（例：いらしゃる→いらっしゃる）</label>
+          </li>
+          <li>
+            <label><input type="checkbox"> 助詞の重複除去（例：「設置をするように」→「設置するように」）</label>
+          </li>
+          <li>
+            <label><input type="checkbox"> 全角英数字→半角に統一（ＩＣＴ→ICT、ＡＩ→AI等）<br></label>
+          </li>
+          <li>
+            <label>数字の漢字表記→半角英数字　十→10<br><input type="checkbox">&nbsp;御検討、御本人などの御→ご<br>取組→取り組み<br>一人一人→一人ひとり<br></label>
+          </li>
+        </ul>
+
+        <h2>6. 発言者表記の確認</h2>
+        <ul>
+          <li>
+            <label><input type="checkbox"> 表記統一：「○河合委員」「○松本（洋）国務大臣」「○堀野政府参考人」等</label>
+          </li>
+          <li>
+            <label><input type="checkbox"> 各発言者の切り替え部分で、前後に空行が入っているか</label>
+          </li>
+        </ul>
+
+        <h2>7. 改変禁止の最終確認</h2>
+        <ul>
+          <li>
+            <label><input type="checkbox"> <span class="u-red">重要：</span>言葉の要約・置き換えをしていないか</label>
+          </li>
+          <li>
+            <label><input type="checkbox"> <span class="u-red">重要：</span>文章構造の整理・並べ替えをしていないか</label>
+          </li>
+          <li>
+            <label><input type="checkbox"> 強調のためにあえて冗長に話している箇所を削っていないか</label>
+          </li>
+          <li>
+            <label><input type="checkbox"> <span class="u-red">自問：</span>「テキストとして読みやすくするための調整の範囲内」と言い切れる編集か</label>
+          </li>
+        </ul>
+
+        <h2>8. note公開前の最終チェック</h2>
+        <ul>
+          <li>
+            <label><input type="checkbox"> 全体を通し読みして違和感がないか</label>
+          </li>
+          <li>
+            <label><input type="checkbox"> Googleドキュメントの「提案モード」での修正が完了しているか</label>
+          </li>
+          <li>
+            <label><input type="checkbox"> 完了報告：「１次/２次done」スタンプ、スレッド投稿、管理表更新</label>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <br>
+
+    <h3>【付録】婉曲表現・表記変換早見表</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>対象の表現（修正前）</th>
+          <th>修正後（推奨）</th>
+          <th>備考</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>というふうに考えます</td>
+          <td>と考えます</td>
+          <td>意味のない婉曲表現の削除</td>
+        </tr>
+        <tr>
+          <td>〜というふうに</td>
+          <td>〜と</td>
+          <td>文脈により「そのように」とする場合もあり</td>
+        </tr>
+        <tr>
+          <td>というようなところでございますが</td>
+          <td>というところでございますが</td>
+          <td>口癖の整理</td>
+        </tr>
+        <tr>
+          <td>設置をするように</td>
+          <td>設置するように</td>
+          <td>助詞の重複整理</td>
+        </tr>
+        <tr>
+          <td>ＩＣＴ / ＡＩ / ＧＸ</td>
+          <td>ICT / AI / GX</td>
+          <td>全角英字は半角に統一</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="footer">チームみらい 広報部ボランティアチーム</div>
+  
+
+</body></html>
